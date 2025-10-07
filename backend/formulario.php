@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email_content .= "Apellidos: $apellidos\n";
         $email_content .= "Edad: $edad\n";
         $email_content .= "Teléfono: $telefono\n";
-        $email_content .= "Localidad: $localidad\n";
+        $email_content .= "Localidad: $localidad\n"; 
         $email_content .= "Correo: $email\n\n";
         $email_content .= "Contraseña: $contrasena\n";
 
