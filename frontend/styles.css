@@ -37,6 +37,9 @@ nav {
  overflow: hidden;
 }
 
+.nav-logo {
+  z-index: 2;
+}
 
 .nav-links {
   list-style: none;
