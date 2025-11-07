@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  jsonserver:                    # <<— AÇÍ, DINS DE "services:"
+  jsonserver:                    
     image: node:20-alpine
     container_name: jsonserver
     working_dir: /app
@@ -28,7 +28,6 @@ services:
       - pi_network
 
   php:
-    image:php: latest  
     build:
       context: ./.docker/php
       dockerfile: Dockerfile
