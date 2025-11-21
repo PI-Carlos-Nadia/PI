@@ -30,9 +30,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header("Location: formulario.php");
         exit;
+   } else {
+
+    require_once __DIR__ . '/includes/json_connect.php';
+    $jsonServer = "http://jsonserver:3005/usuaris";
+
+    // Crear usuario a partir de formulario
+    $nouUsuari = [
+        "nom_usuari" => explode('@', $correo)[0],  // nombre antes del @ como usuario
+        "contrasenya" => password_hash("1234", PASSWORD_DEFAULT), // contraseña fija o genera otra
+        "email" => $correo,
+        "nom" => $nombre,
+        "cognoms" => "",
+        "data_registre" => date('c')
+    ];
+    echo "<pre>";
+    var_dump($nouUsuari);
+    echo "</pre>";
+    // Guardar en JSON (igual que Register)
+    $resultat = json_post($jsonServer, $nouUsuari);
+
+    unset($_SESSION['datos']);
+
+    echo "<h2>El registro se ha realizado con éxito</h2>";
+    
+
+    if ($resultat) {
+        echo "<p>Usuario creado correctamente en JSON.</p>";
     } else {
-        unset($_SESSION['datos']);
-        echo "<h2>El registro se ha realizado con éxito</h2>";
-        echo '<a href="formulario.php">Volver al formulario</a>';
+        echo "<p>Error al crear el usuario en JSON.</p>";
     }
+
+    echo '<a href="formulario.php">Volver al formulario</a>';
+}
 }

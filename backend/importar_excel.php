@@ -5,7 +5,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 // 📁 Carpetas absolutas (dentro del contenedor PHP)
 $uploadDir = '/var/www/uploads/';
 $dataDir   = '/var/www/data/';
-$jsonFile  = $dataDir . 'products.json';
+$jsonFile  = $dataDir . 'datos.json';
 
 // 🧱 Asegura que existen
 if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
@@ -66,10 +66,10 @@ foreach ($rows as $index => $row) {
 // 🧾 Guardar JSON localmente
 $data = ["productes" => $productes];
 file_put_contents($jsonFile, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-$localCopy = '/var/www/html/../data/products.json';
+$localCopy = '/var/www/html/../data/datos.json';
 copy($jsonFile, $localCopy);
 // 🔗 Enviar dades al JSON Server (opcional)
-$jsonServerUrl = 'http://jsonserver:3000/productes';
+$jsonServerUrl = 'http://jsonserver:3005/productes';
 $ch = curl_init($jsonServerUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($productes));
@@ -80,8 +80,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
 $response = curl_exec($ch);
 curl_close($ch);
 
-// ✅ Resultat
+// Resultat
 echo "<h2>Importació completada</h2>";
 echo "<p>Total productes importats: " . count($productes) . "</p>";
-echo "<p><a href='http://localhost:3000/productes' target='_blank'>Veure productes al JSON Server</a></p>";
-echo "<p><a href='/data/products.json' target='_blank'>Descarregar JSON local</a></p>";
+echo "<p><a href='http://localhost:3005/productes' target='_blank'>Veure productes al JSON Server</a></p>";
+echo "<p><a href='/data/datos.json' target='_blank'>Descarregar JSON local</a></p>";

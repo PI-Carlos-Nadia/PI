@@ -2,7 +2,7 @@
 session_start();
 require_once __DIR__ . '/../includes/json_connect.php';
 
-$jsonServer = "http://jsonserver:3000/usuaris";
+$jsonServer = "http://jsonserver:3005/usuaris";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nomUsuari = trim($_POST['nom_usuari']);
