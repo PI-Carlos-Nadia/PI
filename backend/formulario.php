@@ -23,40 +23,47 @@
     unset($_SESSION['errores']);
   }
   ?>
-
-  <form action="procesar.php" method="POST">
+<section id="form">
+  <form action="procesar.php" method="POST" novalidate>
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre"
-      value="<?php echo htmlspecialchars($_SESSION['datos']['nombre'] ?? ''); ?>" />
+      value="<?php echo htmlspecialchars($_SESSION['datos']['nombre'] ?? ''); ?>" minlength="4" required />
+      <span class="error"></span>
     <br><br>
 
     <label for="correo">Correo electrónico:</label>
     <input type="text" id="correo" name="correo"
-      value="<?php echo htmlspecialchars($_SESSION['datos']['correo'] ?? ''); ?>" />
-    <br><br>
+      value="<?php echo htmlspecialchars($_SESSION['datos']['correo'] ?? ''); ?>" required/>
+    <span class="error"></span>
+      <br><br>
 
     <label for="ciclo">Ciclo:</label>
-    <select id="ciclo" name="ciclo">
+    <select id="ciclo" name="ciclo" required>
       <option value="">Selecciona un ciclo</option>
       <option value="DAW" <?php if (($_SESSION['datos']['ciclo'] ?? '') == 'DAW') echo 'selected'; ?>>DAW</option>
       <option value="DAM" <?php if (($_SESSION['datos']['ciclo'] ?? '') == 'DAM') echo 'selected'; ?>>DAM</option>
       <option value="ASIX" <?php if (($_SESSION['datos']['ciclo'] ?? '') == 'ASIX') echo 'selected'; ?>>ASIX</option>
     </select>
+    <span class="error"></span>
     <br><br>
 
     <label for="telefono">Teléfono:</label>
     <input type="text" id="telefono" name="telefono"
-      value="<?php echo htmlspecialchars($_SESSION['datos']['telefono'] ?? ''); ?>" />
-    <br><br>
+      value="<?php echo htmlspecialchars($_SESSION['datos']['telefono'] ?? ''); ?>" minlength="9" step="1"/>
+    <span class="error"></span>
+      <br><br>
 
     <input type="checkbox" id="consent" name="consent" value="1"
-      <?php if (!empty($_SESSION['datos']['consent'])) echo 'checked'; ?> />
+      <?php if (!empty($_SESSION['datos']['consent'])) echo 'checked'; ?> required/>
     <label for="consent">Consentimiento del tratamiento de datos</label>
+    <span class="error"></span>
     <br><br>
 
     <button type="submit">Enviar</button>
   </form>
 
+</section>
+<script src="/js/validacion.js" defer></script>
 </body>
 
 </html>
