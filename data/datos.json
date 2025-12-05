@@ -1,60 +1,49 @@
 {
-  "productes": [
-    {
-      "id": "1",
-      "sku": "A100",
-      "nom": "Camisa blava",
-      "descripcio": "Camisa de cotó blau, talla M",
-      "img": "camisa.jpg",
-      "preu": 19.99,
-      "estoc": 15
-    },
-    {
-      "id": "2",
-      "sku": "A200",
-      "nom": "Pantalons negres",
-      "descripcio": "Pantalons negres clàssics, talla L",
-      "img": "pantalons.jpg",
-      "preu": 29.5,
-      "estoc": 20
-    },
-    {
-      "id": "3",
-      "sku": "B300",
-      "nom": "Sabatilles esportives",
-      "descripcio": "Sabatilles unisex per a córrer",
-      "img": "sabatilles.jpg",
-      "preu": 59.99,
-      "estoc": 10
-    },
-    {
-      "id": "4",
-      "sku": "C400",
-      "nom": "Gorra vermella",
-      "descripcio": "Gorra ajustable de color vermell",
-      "img": "gorra.jpg",
-      "preu": 9.99,
-      "estoc": 50
-    },
-    {
-      "id": "5",
-      "sku": "D500",
-      "nom": "Jaqueta d'hivern",
-      "descripcio": "Jaqueta gruixuda per a l'hivern",
-      "img": "jaqueta.jpg",
-      "preu": 89.9,
-      "estoc": 5
-    }
-  ],
-  "usuaris": [
-    {
-      "id": "7a2e",
-      "nom_usuari": "nadia.poler",
-      "contrasenya": "$2y$10$giMGxECiNYNsxJ8g9DGk5u.fScafjlHS50WWJt9iTUrPhe7bxRHmq",
-      "email": "nadia.poler@gmail.com",
-      "nom": "Nadia",
-      "cognoms": "",
-      "data_registre": "2025-11-21T15:35:08+00:00"
-    }
-  ]
+    "productes": [
+        {
+            "id": 1,
+            "sku": "A100",
+            "nom": "Camisa blava",
+            "descripcio": "Camisa de cotó blau, talla M",
+            "img": "camisa.jpg",
+            "preu": 19.99,
+            "estoc": 15
+        },
+        {
+            "id": 2,
+            "sku": "A200",
+            "nom": "Pantalons negres",
+            "descripcio": "Pantalons negres clàssics, talla L",
+            "img": "pantalons.jpg",
+            "preu": 29.5,
+            "estoc": 20
+        },
+        {
+            "id": 3,
+            "sku": "B300",
+            "nom": "Sabatilles esportives",
+            "descripcio": "Sabatilles unisex per a córrer",
+            "img": "sabatilles.jpg",
+            "preu": 59.99,
+            "estoc": 10
+        },
+        {
+            "id": 4,
+            "sku": "C400",
+            "nom": "Gorra vermella",
+            "descripcio": "Gorra ajustable de color vermell",
+            "img": "gorra.jpg",
+            "preu": 9.99,
+            "estoc": 50
+        },
+        {
+            "id": 5,
+            "sku": "D500",
+            "nom": "Jaqueta d'hivern",
+            "descripcio": "Jaqueta gruixuda per a l'hivern",
+            "img": "jaqueta.jpg",
+            "preu": 89.9,
+            "estoc": 5
+        }
+    ]
 }

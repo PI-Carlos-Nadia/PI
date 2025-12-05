@@ -1,0 +1,22 @@
+{
+    "usuaris": [
+        {
+            "nom_usuari": "nadia.poler",
+            "contrasenya": "$2y$10$YXGpnV27J8TQf\/g34A0B6u3d9lrjfUS2OOabwqKo4.hHhoTwFtATy",
+            "email": "nadia.poler@gmail.com",
+            "nom": "nadia",
+            "cognoms": "",
+            "telefono": "42342342",
+            "data_registre": "2025-11-28T11:18:00+00:00"
+        },
+        {
+            "nom_usuari": "nadia.poler",
+            "contrasenya": "$2y$10$FPgqN\/j\/fz3cDaTTUlklKuaVvx1J7LiIi94VZawCLF.IEBPgI593i",
+            "email": "nadia.poler@gmail.com",
+            "nom": "luis",
+            "cognoms": "",
+            "telefono": "42342342",
+            "data_registre": "2025-11-28T11:18:16+00:00"
+        }
+    ]
+}

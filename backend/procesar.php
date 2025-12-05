@@ -44,9 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "cognoms" => "",
         "data_registre" => date('c')
     ];
-    echo "<pre>";
-    var_dump($nouUsuari);
-    echo "</pre>";
+
     // Guardar en JSON (igual que Register)
     $resultat = json_post($jsonServer, $nouUsuari);
 

@@ -4,6 +4,8 @@ use_directory_urls: false
 
 nav:
   - "Inici": "index.md"
+  - "Sprint 1": "Sprint1.md"
+  
 
 theme:
   language: ca

@@ -1,7 +1,5 @@
-<!--http://localhost:8080/procesar.php-->
-<?php
-session_start();
-?>
+<!-- http://localhost:8080/formulario.php -->
+
 <!DOCTYPE html>
 <html lang="es">
 

@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://PI-Carlos-Nadia.github.io/PI/index.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-11-27</lastmod>
     </url>
     <url>
-         <loc>https://PI-Carlos-Nadia.github.io/PI/Proyecto_de_Prevencion_de_Riesgos_Laborales_fixed.html</loc>
-         <lastmod>2025-10-03</lastmod>
+         <loc>https://PI-Carlos-Nadia.github.io/PI/Prevencion_De_Riesgos.html</loc>
+         <lastmod>2025-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://PI-Carlos-Nadia.github.io/PI/Sprint1.html</loc>
+         <lastmod>2025-11-27</lastmod>
     </url>
 </urlset>
